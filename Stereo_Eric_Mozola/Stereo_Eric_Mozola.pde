@@ -26,7 +26,6 @@ float x2;
 float posx;
 //sets the song
 int pl = round(random(1, 11));
-;
 
 //gives mouse cords
 void test() {
@@ -34,9 +33,6 @@ void test() {
   textSize(12);
   text(mouseX+" "+mouseY, mouseX, mouseY);
 }
-
-
-
 
 void setup()
 {
@@ -56,8 +52,6 @@ void setup()
     meta[i] = players[i].getMetaData();
   }
 }
-
-
 
 //Start of Button and Slider
 void mouseClicked() {
@@ -128,13 +122,11 @@ void mouseClicked() {
   
 }
 
-
 void mouseReleased() {
   if (Hold==true) {
     Hold=false;
   }
 }
-
 
 void mousePressed() {
   //start of slider positioning
@@ -177,7 +169,6 @@ void button() {
   rect(width/4, height/7, 50, 50);
 }
 
-
 void limiter() {
   //stops the slider at 0 and 10
   if (sldPos < 50) {
@@ -186,10 +177,6 @@ void limiter() {
     sldPos=width-50;
   }
 }
-
-
-
-
 
 void slider() {
   strokeWeight(0);
@@ -232,7 +219,6 @@ void num() {
   text("Fast Forward", width/10, height/7);
   text("Rewind", width/4, height/7);
 }
-
 float getSetting() {
   return (sldPos - 50 )/40;
 }
@@ -253,7 +239,6 @@ void sound() {
     players[pl].pause();
   }
 }
-
 
 void lines() {
   // draw the waveforms
@@ -295,7 +280,6 @@ void fast() {
   } else {
   }
 }
-
 
 //end of button and slider
 void draw()
